@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: nitter
+    env: docker
+    plan: free
+    region: oregon
+    branch: master
+    autoDeploy: true
+    healthCheckPath: /
