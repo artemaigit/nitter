@@ -21,7 +21,7 @@ let
 
   sessionsPath = getEnv("NITTER_SESSIONS_FILE", "./sessions.jsonl")
 
-initSessionPool(cfg, sessionsPath)
+#initSessionPool(cfg, sessionsPath)
 
 if not cfg.enableDebug:
   # Silence Jester's query warning
