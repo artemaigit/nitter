@@ -7,3 +7,14 @@ services:
     branch: master
     autoDeploy: true
     healthCheckPath: /
+    envVars:
+      - key: REDIS_HOST
+        value: nitter-redis
+      - key: REDIS_PORT
+        value: 6379
+    dependsOn:
+      - name: nitter-redis
+
+  - type: redis
+    name: nitter-redis
+    plan: free
