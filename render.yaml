@@ -1,4 +1,8 @@
 services:
+  - type: redis
+    name: nitter-redis
+    plan: free
+
   - type: web
     name: nitter
     env: docker
@@ -12,9 +16,3 @@ services:
         value: nitter-redis
       - key: REDIS_PORT
         value: 6379
-    dependsOn:
-      - name: nitter-redis
-
-  - type: redis
-    name: nitter-redis
-    plan: free
